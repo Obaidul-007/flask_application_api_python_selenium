@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Profile - Test Application{% endblock %}
+{% block header %}User Profile{% endblock %}
+{% block content %}
+<div class="card">
+    <h3>Your Profile Information</h3>
+    {% if user %}
+    <p><strong>Username:</strong> {{ user[0] }}</p>
+    <p><strong>Email:</strong> {{ user[1] }}</p>
+    <p><strong>Member Since:</strong> {{ user[2] }}</p>
+    <p><strong>Status:</strong> <span class="status-badge status-success">Active</span></p>
+    {% endif %}
+</div>
+
+<div class="card">
+    <h3>Account Actions</h3>
+    <a href="{{ url_for('dashboard') }}" class="btn">Back to Dashboard</a>
+</div>
+{% endblock %}

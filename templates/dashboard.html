@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Test Application{% endblock %}
+{% block header %}Dashboard{% endblock %}
+{% block content %}
+<div class="card">
+    <h3>Welcome to your Dashboard, {{ username }}!</h3>
+    <p>You have successfully logged in to the test application.</p>
+    <span class="status-badge status-success">✅ Authentication Working</span>
+</div>
+
+<div class="card">
+    <h3>System Statistics</h3>
+    <p id="user-count"><strong>Total Users:</strong> {{ user_count }}</p>
+    <p><strong>Your Role:</strong> User</p>
+    <p><strong>Last Login:</strong> Just now</p>
+    <p><strong>Status:</strong> <span class="status-badge status-success">Active</span></p>
+</div>
+
+<div class="card">
+    <h3>Quick Actions</h3>
+    <a href="{{ url_for('profile') }}" class="btn">View Profile</a>
+    <a href="{{ url_for('logout') }}" class="btn" style="background-color: #dc3545;">Logout</a>
+</div>
+
+<div class="card">
+    <h3>API Endpoints</h3>
+    <p><a href="/api/health" target="_blank">Health Check</a></p>
+    <p><a href="/api/db/status" target="_blank">Database Status</a></p>
+    <p><a href="/api/system/info" target="_blank">System Info</a></p>
+</div>
+{% endblock %}

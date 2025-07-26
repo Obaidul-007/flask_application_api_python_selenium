@@ -1,0 +1,20 @@
+# Flask Application Dependencies
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Test Automation Dependencies
+selenium==4.15.2
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-xdist==3.3.1
+pytest-json-report==1.5.0
+requests==2.31.0
+faker==19.12.0
+python-dotenv==1.0.0
+webdriver-manager==4.0.1
+allure-pytest==2.13.2
+configparser==6.0.0
+
+# Additional Utilities
+colorama==0.4.6
+urllib3==2.1.0
